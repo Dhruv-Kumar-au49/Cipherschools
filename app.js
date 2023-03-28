@@ -1,19 +1,7 @@
 const express = require('express');
 const app = express();
-const cors = require('cors');
-const whitelist = ['http://localhost:3000']; // add the origin of your frontend app here
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+const cors=require('cors')
+app.use(cors())
 const { urlencoded } = require('express');
 app.use(urlencoded())
 app.use(express.json())
