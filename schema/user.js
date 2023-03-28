@@ -17,9 +17,6 @@ email:{
 password:{
     type:String,
     required: true,
-},
-image:{
-    type:String,
 }
 
 })
